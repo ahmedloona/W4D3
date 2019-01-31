@@ -1,0 +1,15 @@
+<h2>Login</h2>
+<% if flash[:errors]%>
+  <%flash[:errors].each do |error|%>
+  <%=error%>
+  <br>
+  <%end%>
+<% end %>
+<br>
+<form action = "<%=session_url%>" method = "post">
+  Username:<br>
+  <input type = "text" name = "session[username]"><br>
+  Password:<br>
+  <input type = "text" name = "session[password]"><br>
+  <input type = "submit" value = "login!">
+</form> 
